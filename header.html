@@ -1,0 +1,27 @@
+<nav class="navbar navbar-expand-sm navbar-fixed-top navbar-dark">
+  <a id="top" class="navbar-brand">sotanishy</a>
+
+  <ul class="navbar-nav ml-auto">
+    <li class="nav-item"><a id="home" class="nav-link">Home</a></li>
+    <li class="nav-item"><a id="about" class="nav-link">About</a></li>
+    <li class="nav-item"><a id="projects" class="nav-link">Projects</a></li>
+    <li class="nav-item"><a class="nav-link disabled">Contact</a></li>
+  </ul>
+</nav>
+<script>
+  (function () {
+    let baseUrl = window.location.origin;
+
+    let top = document.getElementById('top');
+    top.href = baseUrl;
+
+    let home = document.getElementById('home');
+    home.href = baseUrl;
+
+    let about = document.getElementById('about');
+    about.href = baseUrl + '/about.html';
+
+    let projects = document.getElementById('projects');
+    projects.href = baseUrl + '/projects';
+  })();
+</script>

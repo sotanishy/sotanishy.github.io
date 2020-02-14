@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>About sotanishy</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles/style.css">
+
+  </head>
+  <body class="d-flex flex-column bg-dark text-white">
+
+    <div id="header"></div>
+
+    <div class="container p-5">
+      <main role="main">
+
+        <h1 class="text-center">About Me</h1>
+        <img class="mx-auto d-block" src="images/sota.png" width="200" alt="Sota Nishiyama" />
+
+        <p>Hi. I'm sotanishy (Sota Nishiyama, 西山颯大), a CS student in Japan.</p>
+
+        <p>Some of my projects I have worked on include:</p>
+
+        <ul>
+          <li>Game development</li>
+          <li>Mobile development</li>
+          <li>Web development</li>
+          <li>Machine learning</li>
+          <li>Competitive programming</li>
+        </ul>
+
+      </main>
+    </div>
+
+    <div id="footer"></div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script>
+    $(function(){
+      let baseUrl = window.location.origin;
+      $('#header').load(baseUrl + '/header.html');
+      $('#footer').load(baseUrl + '/footer.html');
+
+      $('<link>', {
+        'type' : 'image/png',
+        'rel' : 'shortcut icon',
+        'href' : baseUrl + '/favicon.png'
+      }).appendTo('head');
+    });
+    </script>
+  </body>
+</html>
