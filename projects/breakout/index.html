@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Breakout - Projects</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../styles/style.css">
+
+    <style>
+    canvas {
+			background-color: #404040;
+			border: 3px solid #909090;
+		}
+    </style>
+
+  </head>
+  <body class="d-flex flex-column bg-dark text-white">
+
+    <div id="header"></div>
+
+    <div class="container p-5">
+      <main role="main">
+
+        <h1 class="text-center">Breakout</h1>
+
+        <p>Breakout is a classic arcade game, and this is the very first game I created when I was 15.</p>
+
+        <p>I coded in HTML/CSS/JavaScript. I basically took the code from a tutorial website and customized it, changing the design and adding more elements.</p>
+
+        <p>View on <a href="https://github.com/sotanishy/breakout">Github</a></p>
+
+        <p>Here is the demo of the project.</p>
+
+        <canvas id="screen" class="mx-auto d-block"></canvas>
+
+      </main>
+    </div>
+
+    <div id="footer"></div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script>
+    $(function(){
+      let baseUrl = window.location.origin;
+      $('#header').load(baseUrl + '/header.html');
+      $('#footer').load(baseUrl + '/footer.html');
+
+      $('<link>', {
+        'type' : 'image/png',
+        'rel' : 'shortcut icon',
+        'href' : baseUrl + '/favicon.png'
+      }).appendTo('head');
+    });
+    </script>
+
+    <script src="src/common.js"></script>
+		<script src="src/objects.js"></script>
+    <script src="src/main.js"></script>
+  </body>
+</html>
