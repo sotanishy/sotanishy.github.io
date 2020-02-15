@@ -9,8 +9,18 @@ body {
     font-family: 'Tomorrow', 'Noto Sans JP', sans-serif;
 }
 
+a,
+a:focus,
+a:hover {
+  color: #fff;
+}
+
 p, ul {
     font-weight: lighter;
+}
+
+img {
+    max-width: 100%;
 }
 
 #footer {
