@@ -1,6 +1,6 @@
-<nav class="navbar navbar-expand-sm navbar-fixed-top navbar-dark bg-dark">
+<nav class="navbar navbar-expand-sm navbar-fixed-top navbar-dark bg-dark border-bottom">
   <div class="container">
-    <a id="top" class="navbar-brand">sotanishy</a>
+    <a id="home" class="navbar-brand">sotanishy</a>
 
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-list" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -8,8 +8,8 @@
 
     <div class="collapse navbar-collapse" id="navbar-list">
       <ul class="navbar-nav ml-auto">
-        <li class="nav-item"><a id="home" class="nav-link">Home</a></li>
         <li class="nav-item"><a id="about" class="nav-link">About</a></li>
+        <li class="nav-item"><a id="skills" class="nav-link">Skills</a></li>
         <li class="nav-item"><a id="projects" class="nav-link">Projects</a></li>
         <li class="nav-item"><a class="nav-link disabled">Contact</a></li>
       </ul>
@@ -20,25 +20,26 @@
   (function () {
     let baseUrl = window.location.origin;
 
-    let top = document.getElementById('top');
-    top.href = baseUrl;
-
     let home = document.getElementById('home');
     home.href = baseUrl;
 
     let about = document.getElementById('about');
     about.href = baseUrl + '/about.html';
 
+    let skills = document.getElementById('skills');
+    skills.href = baseUrl + '/skills.html';
+
     let projects = document.getElementById('projects');
     projects.href = baseUrl + '/projects';
 
     switch (window.location.pathname) {
-      case '/':
-      home.classList.add('active');
-      break;
 
       case '/about.html':
       about.classList.add('active');
+      break;
+
+      case '/skills.html':
+      skills.classList.add('active');
       break;
 
       case '/projects/':
