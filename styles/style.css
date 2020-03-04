@@ -33,11 +33,12 @@ img {
     max-width: 100%;
 }
 
-#footer {
+footer {
     position: absolute;
     left: 0;
     bottom: 0;
     height: 40px;
     width: 100%;
     overflow: hidden;
+    line-height: 40px;
 }
