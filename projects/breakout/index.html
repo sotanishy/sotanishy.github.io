@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -27,13 +27,25 @@
 
         <h1 class="text-center">Breakout</h1>
 
-        <p>Breakout is a classic arcade game, and this is the very first game I created when I was 15.</p>
+        <div lang="en">
+          <p>Breakout is a classic arcade game, and this is the very first game I created when I was 15.</p>
 
-        <p>I coded in HTML/CSS/JavaScript. I basically took the code from a tutorial website and customized it, changing the design and adding more elements.</p>
+          <p>I coded in HTML/CSS/JavaScript. I basically took the code from a tutorial website and customized it, changing the design and adding more elements.</p>
 
-        <p>View on <a href="https://github.com/sotanishy/breakout">Github</a></p>
+          <p>View on <a href="https://github.com/sotanishy/breakout">Github</a></p>
 
-        <p>Here is the demo of the project.</p>
+          <p>Here is the demo of the project.</p>
+        </div>
+
+        <div lang="ja">
+          <p>Breakoutは有名なアーケードゲームで、私が15歳の時に作った最初のゲームです。</p>
+
+          <p>プログラミングはHTML/CSS/JavaScriptで行いました。基本的には、チュートリアルのウェブサイトからコードを拝借して、デザインを変えたり要素を追加したりしました。</p>
+
+          <p><a href="https://github.com/sotanishy/breakout">Github</a>はこちら</p>
+
+          <p>以下がプロジェクトのデモです。</p>
+        </div>
 
         <canvas id="screen" class="mx-auto d-block"></canvas>
 
@@ -53,6 +65,30 @@
         'rel' : 'shortcut icon',
         'href' : baseUrl + '/favicon.png'
       }).appendTo('head');
+
+      let storageSupported = (typeof(Storage) !== 'undefined');
+      let key = 'sotanishy.github.io-lang';
+      let lang = storageSupported ? (localStorage.getItem(key) || 'en') : 'en';
+
+      if (lang == 'ja') {
+        $('[lang="en"]').hide();
+      } else {
+        $('[lang="ja"]').hide();
+      }
+
+      $('#lang').click(function () {
+        event.preventDefault();
+        $('[lang="en"]').toggle();
+        $('[lang="ja"]').toggle();
+
+        if (lang == 'en') {
+          lang = 'ja';
+          if (storageSupported) localStorage.setItem(key, 'ja');
+        } else {
+          lang = 'en';
+          if (storageSupported) localStorage.setItem(key, 'en');
+        }
+      });
     });
     </script>
 
