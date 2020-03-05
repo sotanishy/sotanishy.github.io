@@ -41,65 +41,7 @@
   </head>
   <body class="d-flex flex-column bg-dark text-white">
 
-    <div id="header">
-      <nav class="navbar navbar-expand-sm navbar-fixed-top navbar-dark">
-        <div class="container">
-          <a id="home" class="navbar-brand">sotanishy</a>
-
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-list" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-
-          <div class="collapse navbar-collapse" id="navbar-list">
-            <ul class="navbar-nav ml-auto">
-              <li class="nav-item"><a id="about" class="nav-link">About</a></li>
-              <li class="nav-item"><a id="skills" class="nav-link">Skills</a></li>
-              <li class="nav-item"><a id="projects" class="nav-link">Projects</a></li>
-              <li class="nav-item"><a id="lang" class="nav-link" href="#">
-                <i class="fa fa-globe"></i>
-                <span lang="en">日本語</span>
-                <span lang="ja">English</span>
-              </a></li>
-              <li class="nav-item"><a class="nav-link" href="https://github.com/sotanishy" target="_blank"><i class="fa fa-github fa-lg"></i></a></li>
-              <li class="nav-item"><a class="nav-link" href="mailto:2480souta@gmail.com" target="_blank"><i class="fa fa-envelope fa-lg"></i></a></li>
-            </ul>
-          </div>
-        </div>
-      </nav>
-      <script>
-        (function () {
-          let baseUrl = window.location.origin;
-
-          let home = document.getElementById('home');
-          home.href = baseUrl;
-
-          let about = document.getElementById('about');
-          about.href = baseUrl + '/about.html';
-
-          let skills = document.getElementById('skills');
-          skills.href = baseUrl + '/skills.html';
-
-          let projects = document.getElementById('projects');
-          projects.href = baseUrl + '/projects';
-
-          switch (window.location.pathname) {
-
-            case '/about.html':
-            about.classList.add('active');
-            break;
-
-            case '/skills.html':
-            skills.classList.add('active');
-            break;
-
-            case '/projects/':
-            projects.classList.add('active');
-            break;
-          }
-        })();
-      </script>
-
-    </div>
+    <div id="header"></div>
 
     <canvas id="canvas"></canvas>
 
@@ -122,42 +64,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-    <script>
-    $(function(){
-      let baseUrl = window.location.origin;
-      // $('#header').load(baseUrl + '/header.html');
-
-      $('<link>', {
-        'type' : 'image/png',
-        'rel' : 'shortcut icon',
-        'href' : baseUrl + '/favicon.png'
-      }).appendTo('head');
-
-      let storageSupported = (typeof(Storage) !== 'undefined');
-      let key = 'sotanishy.github.io-lang';
-      let lang = storageSupported ? (localStorage.getItem(key) || 'en') : 'en';
-
-      if (lang == 'ja') {
-        $('[lang="en"]').hide();
-      } else {
-        $('[lang="ja"]').hide();
-      }
-
-      $('#lang').click(function () {
-        event.preventDefault();
-        $('[lang="en"]').toggle();
-        $('[lang="ja"]').toggle();
-
-        if (lang == 'en') {
-          lang = 'ja';
-          if (storageSupported) localStorage.setItem(key, 'ja');
-        } else {
-          lang = 'en';
-          if (storageSupported) localStorage.setItem(key, 'en');
-        }
-      });
-    });
-    </script>
+    <script src="scripts/main.js"></script>
     <script src="scripts/game_of_life.js"></script>
     <script>
     $(function(){
