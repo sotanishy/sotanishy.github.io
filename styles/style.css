@@ -31,29 +31,3 @@ main {
 img {
     max-width: 100%;
 }
-
-footer {
-    font-weight: lighter;
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    height: 40px;
-    width: 100%;
-    overflow: hidden;
-}
-
-footer p {
-    line-height: 40px;
-}
-
-.footer-btn:hover {
-    opacity: 0.8;
-}
-
-#github-bg {
-    color: black;
-}
-
-#email-bg {
-    color: #c71610;
-}
