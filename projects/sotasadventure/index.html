@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -7,6 +7,7 @@
     <title>Projects</title>
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="../../styles/style.css">
 
   </head>
@@ -21,20 +22,32 @@
 
         <img class="mx-auto d-block" src="sotasadventure.png" width="500" alt="Sota's Adventure" />
 
-        <p>Sota's Adventure is a simple side-scrolling RPG game, just like Super Mario Bros.</p>
+        <div lang="en">
+          <p>Sota's Adventure is a simple side-scrolling RPG game, just like Super Mario Bros.</p>
 
-        <p>This is one of the biggest and most time-consuming project I have worked on, taking me some 5 months from writing the first line of code to publishing it on GitHub. Although there were some frustrating moments along the way, this is one of my favorite projects.</p>
+          <p>This is one of the biggest and most time-consuming project I have worked on, taking me some 5 months from writing the first line of code to publishing it on GitHub. Although there were some frustrating moments along the way, this is one of my favorite projects.</p>
 
-        <p>This game is developed in Java, without any external library or framework (at that time I thought using someone else's code was cheating). Taking advantage of 3rd party code would have allowed me to finish the project much quicker, but I gained a lot from this experience and it surely made me a better coder.</p>
+          <p>This game is developed in Java, without any external library or framework (at that time I thought using someone else's code was cheating). Taking advantage of 3rd party code would have allowed me to finish the project much quicker, but I gained a lot from this experience and it surely made me a better coder.</p>
 
-        <p>Oh, by the way, the icon for this website (and pretty much everything I use) came from this game.</p>
+          <p>Oh, by the way, the icon for this website (and pretty much everything I use) came from this game :)</p>
 
-        <p>Download the game or view the source code on <a href="https://github.com/sotanishy/sotasadventure">GitHub</a>.</p>
+          <p>Download the game or view the source code on <a href="https://github.com/sotanishy/sotasadventure">GitHub</a>.</p>
+        </div>
+
+        <div lang="ja">
+          <p>Sota's AdventureはSuper Mario Bros.のような、シンプルな横スクロールRPGゲームです。</p>
+
+          <p>コードの最初の1行を書いてからGitHubで公開するまでの期間は約5か月で、私が取り組んだプロジェクトの中で最大かつ最長のものです。途中何度も挫折しそうになりましたが、私のお気に入りのプロジェクトです。</p>
+
+          <p>このゲームはJavaで開発しました。外部ライブラリやフレームワークは一切使用しておりません（当時は、他人が書いたコードを使うのはチートだと思っていました）。外部のコードを利用すればこのプロジェクトはずっと早く終わったと思いますが、この経験から多くのことを学ぶことができ、より良いコーダーになることができたと思います。</p>
+
+          <p>ところで、このウェブサイト（と私が使うもののほとんど）のアイコンは、このゲームから来ています :)</p>
+
+          <p><a href="https://github.com/sotanishy/sotasadventure">GitHub</a>でゲームのダウンロードとソースコードの閲覧ができます。</p>
+        </div>
 
       </main>
     </div>
-
-    <div id="footer"></div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
@@ -43,13 +56,36 @@
     $(function(){
       let baseUrl = window.location.origin;
       $('#header').load(baseUrl + '/header.html');
-      $('#footer').load(baseUrl + '/footer.html');
 
       $('<link>', {
         'type' : 'image/png',
         'rel' : 'shortcut icon',
         'href' : baseUrl + '/favicon.png'
       }).appendTo('head');
+
+      let storageSupported = (typeof(Storage) !== 'undefined');
+      let key = 'sotanishy.github.io-lang';
+      let lang = storageSupported ? (localStorage.getItem(key) || 'en') : 'en';
+
+      if (lang == 'ja') {
+        $('[lang="en"]').hide();
+      } else {
+        $('[lang="ja"]').hide();
+      }
+
+      $('#lang').click(function () {
+        event.preventDefault();
+        $('[lang="en"]').toggle();
+        $('[lang="ja"]').toggle();
+
+        if (lang == 'en') {
+          lang = 'ja';
+          if (storageSupported) localStorage.setItem(key, 'ja');
+        } else {
+          lang = 'en';
+          if (storageSupported) localStorage.setItem(key, 'en');
+        }
+      });
     });
     </script>
   </body>

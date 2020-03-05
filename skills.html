@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -20,8 +20,13 @@
 
         <h1 class="text-center">Skills</h1>
 
-        <p>This page is currently under development. Please check back in later.</p>
+        <div lang="en">
+          <p>This page is currently under development. Please check back in later.</p>
+        </div>
 
+        <div lang="ja">
+          <p>このページは現在開発中です。</p>
+        </div>
       </main>
     </div>
 
@@ -38,6 +43,30 @@
         'rel' : 'shortcut icon',
         'href' : baseUrl + '/favicon.png'
       }).appendTo('head');
+
+      let storageSupported = (typeof(Storage) !== 'undefined');
+      let key = 'sotanishy.github.io-lang';
+      let lang = storageSupported ? (localStorage.getItem(key) || 'en') : 'en';
+
+      if (lang == 'ja') {
+        $('[lang="en"]').hide();
+      } else {
+        $('[lang="ja"]').hide();
+      }
+
+      $('#lang').click(function () {
+        event.preventDefault();
+        $('[lang="en"]').toggle();
+        $('[lang="ja"]').toggle();
+
+        if (lang == 'en') {
+          lang = 'ja';
+          if (storageSupported) localStorage.setItem(key, 'ja');
+        } else {
+          lang = 'en';
+          if (storageSupported) localStorage.setItem(key, 'en');
+        }
+      });
     });
     </script>
   </body>
