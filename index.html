@@ -10,11 +10,16 @@
     <link rel="stylesheet" href="styles/style.css">
 
     <style>
+    h1, h2 {
+      display: none;
+    }
+
     nav {
       background-color: rgba(52, 58, 64, 0.7);
     }
 
     canvas{
+      display: none;
       position: absolute;
       left: 0;
       top: 0;
@@ -26,60 +31,7 @@
   </head>
   <body class="d-flex flex-column bg-dark text-white">
 
-    <div id="header">
-      <nav class="navbar navbar-expand-sm navbar-fixed-top navbar-dark">
-        <div class="container">
-          <a id="home" class="navbar-brand">sotanishy</a>
-
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-list" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-
-          <div class="collapse navbar-collapse" id="navbar-list">
-            <ul class="navbar-nav ml-auto">
-              <li class="nav-item"><a id="about" class="nav-link">About</a></li>
-              <li class="nav-item"><a id="skills" class="nav-link">Skills</a></li>
-              <li class="nav-item"><a id="projects" class="nav-link">Projects</a></li>
-              <li class="nav-item"><a class="nav-link disabled">Contact</a></li>
-            </ul>
-          </div>
-        </div>
-      </nav>
-      <script>
-        (function () {
-          let baseUrl = window.location.origin;
-
-          let home = document.getElementById('home');
-          home.href = baseUrl;
-
-          let about = document.getElementById('about');
-          about.href = baseUrl + '/about.html';
-
-          let skills = document.getElementById('skills');
-          skills.href = baseUrl + '/skills.html';
-
-          let projects = document.getElementById('projects');
-          projects.href = baseUrl + '/projects';
-
-          switch (window.location.pathname) {
-
-            case '/about.html':
-            about.classList.add('active');
-            break;
-
-            case '/skills.html':
-            skills.classList.add('active');
-            break;
-
-            case '/projects/':
-            projects.classList.add('active');
-            break;
-          }
-        })();
-      </script>
-
-
-    </div>
+    <div id="header"></div>
 
     <canvas id="canvas"></canvas>
 
@@ -101,7 +53,7 @@
     <script>
     $(function(){
       let baseUrl = window.location.origin;
-      // $('#header').load(baseUrl + '/header.html');
+      $('#header').load(baseUrl + '/header.html');
       $('#footer').load(baseUrl + '/footer.html');
 
       $('<link>', {
@@ -112,5 +64,18 @@
     });
     </script>
     <script src="scripts/game_of_life.js"></script>
+    <script>
+    $(function(){
+      $('#canvas').fadeIn(5000);
+
+      setTimeout(function () {
+        $('h1').fadeIn(1000);
+      }, 1000);
+
+      setTimeout(function () {
+        $('h2').fadeIn(1000);
+      }, 2000);
+    });
+    </script>
   </body>
 </html>
