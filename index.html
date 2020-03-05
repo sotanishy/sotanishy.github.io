@@ -7,6 +7,7 @@
     <title>sotanishy</title>
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="styles/style.css">
 
     <style>
@@ -16,6 +17,10 @@
 
     nav {
       background-color: rgba(52, 58, 64, 0.7);
+    }
+
+    main {
+      height: 150px;
     }
 
     canvas{
@@ -45,7 +50,58 @@
       </main>
     </div>
 
-    <div id="footer"></div>
+    <div id="footer">
+      <footer class="text-center navbar-fixed-bottom bg-dark border-top border-secondary">
+        <div class="container">
+          <div class="row">
+            <div class="col"></div>
+
+            <div class="col">
+              <p>Sota Nishiyama &copy; 2020</p>
+            </div>
+
+            <div class="col p-1">
+              <a class="fa-stack footer-btn" href="https://github.com/sotanishy" target="_blank">
+                <i class="fa fa-circle fa-stack-2x" id="github-bg"></i>
+                <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+              </a>
+              <a class="fa-stack footer-btn" href="mailto:2480souta@gmail.com" target="_blank">
+                <i class="fa fa-circle fa-stack-2x" id="email-bg"></i>
+                <i class="fa fa-envelope fa-stack-1x fa-inverse"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </footer>
+      <style>
+      footer {
+          font-weight: lighter;
+          position: absolute;
+          left: 0;
+          bottom: 0;
+          height: 40px;
+          width: 100%;
+          overflow: hidden;
+          /* line-height: 40px; */
+      }
+
+      footer p {
+        line-height: 40px;
+      }
+
+      .fa-stack:hover, .fa:hover {
+        opacity: 0.8;
+      }
+
+      #github-bg {
+        color: black;
+      }
+
+      #email-bg {
+        color: #c71610;
+      }
+      </style>
+    </div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
@@ -54,7 +110,7 @@
     $(function(){
       let baseUrl = window.location.origin;
       $('#header').load(baseUrl + '/header.html');
-      $('#footer').load(baseUrl + '/footer.html');
+      // $('#footer').load(baseUrl + '/footer.html');
 
       $('<link>', {
         'type' : 'image/png',

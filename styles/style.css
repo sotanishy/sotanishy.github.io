@@ -40,5 +40,20 @@ footer {
     height: 40px;
     width: 100%;
     overflow: hidden;
+}
+
+footer p {
     line-height: 40px;
+}
+
+.footer-btn:hover {
+    opacity: 0.8;
+}
+
+#github-bg {
+    color: black;
+}
+
+#email-bg {
+    color: #c71610;
 }
