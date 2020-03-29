@@ -10,22 +10,8 @@ body {
     min-height: 100%;
 }
 
-.center {
-  position: absolute;
-  top: 40%;
-  left: 50%;
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-}
-
-a,
-a:focus,
-a:hover {
-  color: #fff;
-}
-
-main {
-    font-weight: lighter;
+a, a:hover {
+  color: inherit;
 }
 
 img {
