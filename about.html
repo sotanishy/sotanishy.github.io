@@ -10,31 +10,46 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="styles/style.css">
 
+    <style>
+      #profile {
+        border-radius: 50%;
+      }
+    </style>
+
   </head>
-  <body class="d-flex flex-column">
+  <body class="d-flex flex-column bg-light">
 
     <div id="header"></div>
 
     <div class="container p-5">
       <main role="main">
 
-        <h1 class="text-center">About Me</h1>
+        <h1 class="text-center mb-3">About Me</h1>
 
         <div class="row">
-          <div class="col-sm-5 text-center">
-            <img class="mx-auto d-block" src="images/sota.png" width="200" alt="Sota Nishiyama" />
+          <div class="col-sm-5">
+            <img id="profile" class="mx-auto my-3 d-block" src="images/sota_dark.png" width="150" alt="Sota Nishiyama" />
 
-            <p class="p-4">
-              AtCoder : <a id="atcoder_rating" target="_blank" style="text-decoration:none;font-weight:bold;">loading</a><br>
-              Codeforces : <a id="codeforces_rating" target="_blank" style="text-decoration:none;font-weight:bold;">loading</a><br>
-              Topcoder SRM : <a id="topcoder_algorithm_rating" target="_blank" style="text-decoration:none;font-weight:bold;">loading</a><br>
-            </p>
+            <table class="table table-borderless table-sm">
+              <tr>
+                <th class="text-right">AtCoder</th>
+                <td><a id="atcoder_rating" target="_blank" style="text-decoration:none;font-weight:bold;">loading</a></td>
+              </tr>
+              <tr>
+                <th class="text-right">Codeforces</th>
+                <td><a id="codeforces_rating" target="_blank" style="text-decoration:none;font-weight:bold;">loading</a></td>
+              </tr>
+              <tr>
+                <th class="text-right">Topcoder</th>
+                <td><a id="topcoder_algorithm_rating" target="_blank" style="text-decoration:none;font-weight:bold;">loading</a></td>
+              </tr>
+            </table>
 
           </div>
 
           <div class="col-sm-7">
             <div lang="en">
-              <p>Hi. I'm sotanishy, a CS student in Japan.</p>
+              <p>I'm sotanishy, a CS student in Japan.</p>
 
               <p>Ever since I wrote the first line of code at 14, I have worked on projects like:</p>
 
