@@ -5,7 +5,7 @@ $(function(){
     $('#header').load(baseUrl + '/header.html', function () {
 
         // when loading is complete, set the language
-        
+
         let storageSupported = (typeof(Storage) !== 'undefined');
         let key = 'sotanishy.github.io-lang';
         let lang = storageSupported ? (localStorage.getItem(key) || 'en') : 'en';
