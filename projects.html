@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Projects</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="styles/style.css">
+
+    <style>
+      .img-thumbnail {
+        height: 300px;
+        object-fit: cover;
+      }
+    </style>
+
+  </head>
+  <body class="d-flex flex-column">
+
+    <div id="header"></div>
+
+    <div class="container p-5">
+      <main role="main">
+
+        <h1 class="text-center m-3">Projects</h1>
+
+        <div class="card-deck m-3">
+          <div class="card text-center">
+            <div class="card-body">
+              <h3 class="card-title">Breakout</h3>
+              <img class="img-thumbnail m-2" src="images/breakout.png" alt="Breakout">
+              <p lang="en" class="card-text">Classic arcade game, the very first game I created at 15.</p>
+              <p lang="ja" class="card-text">15歳の時に作った最初のアーケードゲーム</p>
+              <p class="card-text">
+                <span class="badge badge-dark">HTML/CSS/JavaScript</span>
+                <span class="badge badge-dark">Game</span>
+              </p>
+              <a target="_blank" href="https://github.com/sotanishy/breakout" class="btn btn-outline-dark">View on GitHub</a>
+              <a href="breakout" class="btn btn-outline-dark">Play Demo</a>
+            </div>
+          </div>
+
+          <div class="card text-center">
+            <div class="card-body">
+              <h3 class="card-title">Sota's Adventure</h3>
+              <img class="img-thumbnail m-2" src="images/sotasadventure.png" alt="Sota's Adventure">
+              <p lang="en" class="card-text">A side-scrolling RPG game<br>Built from scratch without any external library or framework.</p>
+              <p lang="ja" class="card-text">横スクロールRPGゲーム<br>外部ライブラリやフレームワークを使わずに0から制作した</p>
+              <p class="card-text">
+                <span class="badge badge-dark">Java</span>
+                <span class="badge badge-dark">Game</span>
+              </p>
+              <a target="_blank" href="https://github.com/sotanishy/breakout" class="btn btn-outline-dark">View on GitHub</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="card-deck m-3">
+          <div class="card text-center">
+            <div class="card-body">
+              <h3 class="card-title">Speedout</h3>
+              <img class="img-thumbnail m-2" src="images/speedout.png" alt="Speedout">
+              <p lang="en" class="card-text">Breakout, but with an accelerating ball<br>Available on Google Play Store</p>
+              <p lang="ja" class="card-text">打つたびに加速するBreakout<br>Google Play Storeで公開中</p>
+              <p class="card-text">
+                <span class="badge badge-dark">Android</span>
+                <span class="badge badge-dark">App</span>
+                <span class="badge badge-dark">Kotlin</span>
+                <span class="badge badge-dark">Game</span>
+              </p>
+              <a target="_blank" href="https://github.com/sotanishy/Speedout" class="btn btn-outline-dark">View on GitHub</a>
+              <a target="_blank" href="https://play.google.com/store/apps/details?id=com.sotanishiyama.speedout" class="btn btn-outline-dark">Download on Play Store</a>
+            </div>
+          </div>
+
+          <div class="card text-center">
+            <div class="card-body">
+              <h3 class="card-title">Flat Earth</h3>
+              <img class="img-thumbnail m-2" src="images/flat-earth.png" alt="Flat Earth">
+              <p lang="en" class="card-text">Create a stereographic projection of the Earth from a world map</p>
+              <p lang="ja" class="card-text">世界地図から地球のステレオ投影を作る</p>
+              <p class="card-text">
+                <span class="badge badge-dark">Python</span>
+                <span class="badge badge-dark">NumPy</span>
+                <span class="badge badge-dark">Jupyter Notebook</span>
+              </p>
+              <a target="_blank" href="https://github.com/sotanishy/flat-earth" class="btn btn-outline-dark">View on GitHub</a>
+            </div>
+          </div>
+        </div>
+
+      </main>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="scripts/main.js"></script>
+  </body>
+</html>

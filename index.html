@@ -60,13 +60,10 @@
 
         <h1 class="text-center"><span class="message">Hello, World</span></h1>
 
-        <div lang="en">
-          <h2 class="text-center"><span class="message">I'm sotanishy, a student developer in Japan.</span></h2>
-        </div>
-
-        <div lang="ja">
-          <h2 class="text-center"><span class="message">学生開発者のsotanishyです</span></h2>
-        </div>
+        <h2 class="text-center">
+          <span lang="en" class="message">I'm sotanishy, a student coder in Japan.</span>
+          <span lang="ja" class="message">学生プログラマのsotanishyです</span>
+        </h2>
 
       </main>
     </div>
@@ -78,8 +75,6 @@
     <script src="scripts/game_of_life.js"></script>
     <script>
     $(function(){
-      $('nav').removeClass('bg-dark');
-
       $('#canvas').fadeIn(5000);
 
       setTimeout(function () {

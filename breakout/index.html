@@ -4,35 +4,39 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Skills</title>
+    <title>Breakout Demo</title>
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="../styles/style.css">
+
+    <style>
+    canvas {
+			background-color: #404040;
+			border: 3px solid #909090;
+		}
+    </style>
 
   </head>
-  <body class="d-flex flex-column bg-light">
+  <body class="d-flex flex-column">
 
     <div id="header"></div>
 
     <div class="container p-5">
       <main role="main">
 
-        <h1 class="text-center">Skills</h1>
+        <canvas id="screen" class="mx-auto d-block"></canvas>
 
-        <div lang="en">
-          <p class="text-center">This page is currently under development. Please check back in later.</p>
-        </div>
-
-        <div lang="ja">
-          <p class="text-center">このページは現在開発中です。しばらくお待ちください。</p>
-        </div>
       </main>
     </div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-    <script src="scripts/main.js"></script>
+    <script src="../scripts/main.js"></script>
+
+    <script src="src/common.js"></script>
+		<script src="src/objects.js"></script>
+    <script src="src/main.js"></script>
   </body>
 </html>

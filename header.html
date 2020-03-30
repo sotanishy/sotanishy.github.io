@@ -26,6 +26,11 @@
   (function () {
     let baseUrl = window.location.origin;
 
+    if (window.location.pathname ==  '/' || window.location.pathname == '/index.html') {
+      let nav = document.getElementsByClassName('navbar')[0];
+      nav.classList.remove('bg-dark');
+    }
+
     let home = document.getElementById('home');
     home.href = baseUrl;
 
@@ -36,7 +41,7 @@
     skills.href = baseUrl + '/skills.html';
 
     let projects = document.getElementById('projects');
-    projects.href = baseUrl + '/projects';
+    projects.href = baseUrl + '/projects.html';
 
     switch (window.location.pathname) {
 
@@ -48,7 +53,7 @@
       skills.classList.add('active');
       break;
 
-      case '/projects/':
+      case '/projects.html':
       projects.classList.add('active');
       break;
     }
